@@ -1,4 +1,5 @@
 import pygame
+from circleshape import CircleShape
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from logger import log_state
 
