@@ -11,3 +11,4 @@ wheels/
 
 # Logging for pygame
 game_state.jsonl
+game_events.jsonl
