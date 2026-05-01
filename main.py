@@ -2,6 +2,7 @@ import pygame
 from circleshape import CircleShape
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from logger import log_state
+from player import Player
 
 def main():
     pygame.init()
@@ -18,6 +19,11 @@ def main():
             
         screen.fill("black")
         pygame.display.flip()
+        x = SCREEN_WIDTH / 2
+        y = SCREEN_HEIGHT / 2 
+        Player.draw(screen) 
+
+
 
         # limit the framerate to 60 FPS
         dt = clock .tick(60) / 1000
