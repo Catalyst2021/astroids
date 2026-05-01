@@ -1,6 +1,6 @@
 import pygame
 from circleshape import CircleShape
-from constants import SCREEN_WIDTH, SCREEN_HEIGHT
+from constants import SCREEN_WIDTH, SCREEN_HEIGHT, PLAYER_RADIUS
 from logger import log_state
 from player import Player
 
@@ -16,12 +16,18 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT: 
                 return 
-            
+        
+        #Make screen black
         screen.fill("black")
+
+        #Draw player 
+        player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+        player.draw(screen) 
+
+        #Refresh the screen
         pygame.display.flip()
-        x = SCREEN_WIDTH / 2
-        y = SCREEN_HEIGHT / 2 
-        Player.draw(screen) 
+        
+        
 
 
 
